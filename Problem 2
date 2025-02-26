@@ -1,0 +1,39 @@
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ nano data.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ head -10 data.txt
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ tail -5 data.txt
+V
+W
+X
+Y
+Z
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ nano numbers.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ head -15 numbers.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ tail -3 numbers.txt
+24
+25
+26
