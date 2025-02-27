@@ -1,0 +1,92 @@
+cdac@DESKTOP-7L1JO9O:~$ ls
+Feb25
+cdac@DESKTOP-7L1JO9O:~$ mkdir LinuxAssignment
+cdac@DESKTOP-7L1JO9O:~$ cd LinuxAssignment/
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ nano file1.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cat file1.txt
+Hello
+Hye
+Hi
+Hey
+Hola
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ mkdir docs
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cp file1.txt docs
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cd docs
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ ls
+file1.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ mv file1.txt file2.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ ls
+file2.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ chmod 744 file2.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ ls -l
+total 4
+-rwxr--r-- 1 cdac cdac 22 Feb 26 18:37 file2.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ sudo chown PGDAC file2.txt
+[sudo] password for cdac:
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ ls -l
+total 4
+-rwxr--r-- 1 PGDAC cdac 22 Feb 26 18:37 file2.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment/docs$ cd ..
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ ls -l
+total 16
+-rw-r--r-- 1 cdac cdac   52 Feb 26 18:44 data.txt
+drwxr-xr-x 2 cdac cdac 4096 Feb 26 18:38 docs
+-rw-r--r-- 1 cdac cdac   22 Feb 26 18:34 file1.txt
+-rw-r--r-- 1 cdac cdac   69 Feb 26 18:46 numbers.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cd
+cdac@DESKTOP-7L1JO9O:~$ ls
+Feb25  LinuxAssignment
+cdac@DESKTOP-7L1JO9O:~$ ls -l
+total 8
+drwxr-xr-x 4 cdac cdac 4096 Feb 27 09:54 Feb25
+drwxr-xr-x 3 cdac cdac 4096 Feb 26 18:46 LinuxAssignment
+cdac@DESKTOP-7L1JO9O:~$ find -name "*.txt"
+./LinuxAssignment/data.txt
+./LinuxAssignment/docs/file2.txt
+./LinuxAssignment/file1.txt
+./LinuxAssignment/numbers.txt
+./Feb25/OSDAY-2/SP/abc.txt
+./Feb25/OSDAY-2/SP/xyz.txt
+cdac@DESKTOP-7L1JO9O:~$ cd LinuxAssignment/
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ grep "He" file1.txt
+Hello
+Hey
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ date
+Thu Feb 27 17:30:40 UTC 2025
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ ip addr
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ ping 142.250.194.100
+PING 142.250.194.100 (142.250.194.100) 56(84) bytes of data.
+64 bytes from 142.250.194.100: icmp_seq=1 ttl=111 time=49.7 ms
+64 bytes from 142.250.194.100: icmp_seq=2 ttl=111 time=59.0 ms
+64 bytes from 142.250.194.100: icmp_seq=3 ttl=111 time=44.5 ms
+64 bytes from 142.250.194.100: icmp_seq=4 ttl=111 time=44.0 ms
+64 bytes from 142.250.194.100: icmp_seq=5 ttl=111 time=44.4 ms
+^C
+--- 142.250.194.100 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4001ms
+rtt min/avg/max/mdev = 44.031/48.329/58.999/5.724 ms
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ zip docs.zip docs
+  adding: docs/ (stored 0%)
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ ls
+data.txt  docs  docs.zip  file1.txt  numbers.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ unzip docs.zip -d newdocs
+Archive:  docs.zip
+   creating: newdocs/docs/
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ ls
+data.txt  docs  docs.zip  file1.txt  newdocs  numbers.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ nano file1.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cat file1.txt
+Hello
+Hye
+Hi
+Hey
+GoodDay
+How are you
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ sed -i 's/Hey/BestWishes/g' file1.txt
+cdac@DESKTOP-7L1JO9O:~/LinuxAssignment$ cat file1.txt
+Hello
+Hye
+Hi
+BestWishes
+GoodDay
+How are you
