@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Print Details</title>
+</head>
+
+<body>
+    <form align="center">
+        <p><label>First Name:</label></p>
+        <input type="text" id="FirstNameIn">
+
+        <p><label>Last Name:</label></p>
+        <input type="text" id="LastNameIn">
+
+        <p><label>Contact Number:</label></p>
+        <input type="number" id="ContactIn">
+
+        <p><label>Email Id:</label></p>
+        <input type="email" id="EmailIn">
+
+        <p><button onclick="Submit()">Submit</button></p>
+    </form>
+    <script>
+        function Submit() {
+            FirstName=document.getElementById("FirstNameIn").value;
+            LastName=document.getElementById("LastNameIn").value;
+            Contact=document.getElementById("ContactIn").value;
+            Email=document.getElementById("EmailIn").value;
+            document.write(FirstName+"<br>");
+            document.write(LastName+"<br>");
+            document.write(Contact+"<br>");
+            document.write(Email+"<br>");
+        }
+
+    </script>
+</body>
+
+</html>
